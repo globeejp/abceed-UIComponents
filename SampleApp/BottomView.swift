@@ -1,7 +1,7 @@
 import UIKit
 
 final class BottomView: UIView {
-    var onTap: (() -> ())?
+    var onTap: (() -> Void)?
 
     override init(frame: CGRect) {
         super.init(frame: frame)

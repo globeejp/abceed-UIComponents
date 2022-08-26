@@ -21,14 +21,22 @@ extension UIView {
         addSubview(view)
 
         NSLayoutConstraint.activate([
-            view.topAnchor.constraint(equalTo: edges.contains(.top) ? safeAreaLayoutGuide.topAnchor : topAnchor,
-                                      constant: top),
-            view.bottomAnchor.constraint(equalTo: edges.contains(.bottom) ? safeAreaLayoutGuide.bottomAnchor : bottomAnchor,
-                                         constant: -bottom),
-            view.leadingAnchor.constraint(equalTo: edges.contains(.leading) ? safeAreaLayoutGuide.leadingAnchor : leadingAnchor,
-                                          constant: leading),
-            view.trailingAnchor.constraint(equalTo: edges.contains(.trailing) ? safeAreaLayoutGuide.trailingAnchor : trailingAnchor,
-                                           constant: -trailing),
+            view.topAnchor.constraint(
+                equalTo: edges.contains(.top) ? safeAreaLayoutGuide.topAnchor : topAnchor,
+                constant: top
+            ),
+            view.bottomAnchor.constraint(
+                equalTo: edges.contains(.bottom) ? safeAreaLayoutGuide.bottomAnchor : bottomAnchor,
+                constant: -bottom
+            ),
+            view.leadingAnchor.constraint(
+                equalTo: edges.contains(.leading) ? safeAreaLayoutGuide.leadingAnchor : leadingAnchor,
+                constant: leading
+            ),
+            view.trailingAnchor.constraint(
+                equalTo: edges.contains(.trailing) ? safeAreaLayoutGuide.trailingAnchor : trailingAnchor,
+                constant: -trailing
+            ),
         ])
 
     }

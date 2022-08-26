@@ -42,10 +42,11 @@ final class ViewController: UIViewController {
 
         view.backgroundColor = UIColor(named: "monotone8")
 
-        [topView, bottomView].forEach {
-            $0.translatesAutoresizingMaskIntoConstraints = false
-            baseStackView.addArrangedSubview($0)
-        }
+        [topView, bottomView]
+            .forEach {
+                $0.translatesAutoresizingMaskIntoConstraints = false
+                baseStackView.addArrangedSubview($0)
+            }
 
         view.constrainSubview(baseStackView)
     }
