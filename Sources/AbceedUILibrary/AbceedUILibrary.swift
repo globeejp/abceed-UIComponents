@@ -1,22 +1,9 @@
 import UIKit
 
 extension UIView {
-    public static func spacer(width: CGFloat? = nil, height: CGFloat? = nil, color: UIColor = .clear) -> UIView {
-        let v = UIView()
-        v.translatesAutoresizingMaskIntoConstraints = false
 
-        if let width = width {
-            v.widthAnchor.constraint(equalToConstant: width).isActive = true
-        }
-
-        if let height = height {
-            v.heightAnchor.constraint(equalToConstant: height).isActive = true
-        }
-
-        v.backgroundColor = color
-        return v
-    }
-
+    /// `constrainSubview`などコードレイアウト系の関数の引数で使用されている。
+    /// 主にセーフエリアに対する制約にするかどうかの指定に用いられる。
     public enum Edge {
         case top, bottom, leading, trailing
     }
@@ -62,4 +49,22 @@ extension UIView {
             againstSafeAreaOf: edges
         )
     }
+
+    /// StackView内の細かいレイアウト調整に使う空っぽのビュー。
+    public static func spacer(width: CGFloat? = nil, height: CGFloat? = nil, color: UIColor = .clear) -> UIView {
+        let v = UIView()
+        v.translatesAutoresizingMaskIntoConstraints = false
+
+        if let width = width {
+            v.widthAnchor.constraint(equalToConstant: width).isActive = true
+        }
+
+        if let height = height {
+            v.heightAnchor.constraint(equalToConstant: height).isActive = true
+        }
+
+        v.backgroundColor = color
+        return v
+    }
+
 }
