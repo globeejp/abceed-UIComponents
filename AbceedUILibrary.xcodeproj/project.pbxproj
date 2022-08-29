@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A1F7E6C28BC9E83003EC026 /* BulletTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1F7E6B28BC9E83003EC026 /* BulletTextView.swift */; };
 		8AFF642528B8E591006C8C10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF642428B8E591006C8C10 /* AppDelegate.swift */; };
 		8AFF642728B8E591006C8C10 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF642628B8E591006C8C10 /* SceneDelegate.swift */; };
 		8AFF642928B8E591006C8C10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF642828B8E591006C8C10 /* ViewController.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8A1F7E6B28BC9E83003EC026 /* BulletTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletTextView.swift; sourceTree = "<group>"; };
 		8AFF640C28B8E54B006C8C10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8AFF640E28B8E54B006C8C10 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8AFF641028B8E54B006C8C10 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -117,7 +119,7 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -128,7 +130,6 @@
 				OBJ_11 /* Products */,
 				OBJ_13 /* README.md */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
@@ -143,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_9 /* AbceedUILibrary.swift */,
+				8A1F7E6B28BC9E83003EC026 /* BulletTextView.swift */,
 			);
 			name = AbceedUILibrary;
 			path = Sources/AbceedUILibrary;
@@ -223,7 +225,7 @@
 				en,
 				Base,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_11 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -266,6 +268,7 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_19 /* AbceedUILibrary.swift in Sources */,
+				8A1F7E6C28BC9E83003EC026 /* BulletTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
