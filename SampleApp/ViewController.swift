@@ -39,7 +39,6 @@ final class ViewController: UIViewController {
     // MARK: Private
 
     private func configureLayout() {
-
         view.backgroundColor = UIColor(named: "monotone8")
 
         [topView, bottomView]
@@ -47,6 +46,8 @@ final class ViewController: UIViewController {
                 $0.translatesAutoresizingMaskIntoConstraints = false
                 baseStackView.addArrangedSubview($0)
             }
+
+        topView.configure(.kinfure())
 
         view.constrainSubview(baseStackView)
     }

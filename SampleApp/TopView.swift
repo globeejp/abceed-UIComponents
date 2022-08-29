@@ -4,15 +4,12 @@ import UIKit
 final class TopView: UIView {
 
     private let author: BulletTextView
+    private let authorValueLabel = UI.label(14, weight: .light, color: .abc.monotone2)
 
     var onTap: (() -> Void)?
 
     override init(frame: CGRect) {
-        let fontSize: CGFloat = 14
-        let label = UI.label(fontSize, weight: .light, color: .abc.monotone2)
-        label.numberOfLines = 0
-        label.text = "ヒロ前田、テッド寺倉、ロス・タロック"
-        author = BulletTextView(TitleLabel("著者"), spacing: 5, rightElement: label, rightTextFontSize: fontSize)
+        author = BulletTextView(TitleLabel("著者"), spacing: 5, rightElement: authorValueLabel, rightTextFontSize: 14)
 
         super.init(frame: frame)
 
@@ -21,10 +18,17 @@ final class TopView: UIView {
 
     required init?(coder: NSCoder) { fatalError() }
 
+    func configure(_ book: Book) {
+        authorValueLabel.text = book.author
+    }
+
     private func configureLayout() {
         backgroundColor = .abc.monotone8
-        addSubview(author)
+
+        authorValueLabel.numberOfLines = 0
         author.translatesAutoresizingMaskIntoConstraints = false
+
+        addSubview(author)
 
         NSLayoutConstraint.activate([
             author.centerXAnchor.constraint(equalTo: centerXAnchor),
