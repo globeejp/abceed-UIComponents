@@ -83,3 +83,32 @@ extension NSLayoutConstraint {
         return self
     }
 }
+
+public enum UI {}
+
+extension UI {
+
+    public static func label(
+        _ size: CGFloat,
+        text: String? = nil,
+        weight: UIFont.Weight = .regular,
+        color: UIColor
+    ) -> UILabel {
+        let label = UILabel()
+        label.text = text
+        label.textColor = color
+        label.font = .systemFont(ofSize: size, weight: weight)
+        return label
+    }
+}
+
+extension Abceed where Base: UIColor {
+    public static var monotone1: UIColor { .init(named: "monotone1")! }
+    public static var monotone2: UIColor { .init(named: "monotone2")! }
+    public static var monotone3: UIColor { .init(named: "monotone3")! }
+    public static var monotone4: UIColor { .init(named: "monotone4")! }
+    public static var monotone5: UIColor { .init(named: "monotone5")! }
+    public static var monotone6: UIColor { .init(named: "monotone6")! }
+    public static var monotone7: UIColor { .init(named: "monotone7")! }
+    public static var monotone8: UIColor { .init(named: "monotone8")! }
+}
