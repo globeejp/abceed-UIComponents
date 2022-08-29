@@ -76,3 +76,10 @@ extension UIView {
     }
 
 }
+
+extension NSLayoutConstraint {
+    public func priority(_ priority: UILayoutPriority) -> NSLayoutConstraint {
+        self.priority = priority
+        return self
+    }
+}
