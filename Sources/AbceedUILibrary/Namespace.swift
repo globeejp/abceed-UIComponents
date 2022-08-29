@@ -48,4 +48,4 @@ extension AbceedCompatible {
 }
 
 /// Extend NSObject with `abceed` proxy.
-extension NSObject: AbceedCompatible { }
+extension NSObject: AbceedCompatible {}

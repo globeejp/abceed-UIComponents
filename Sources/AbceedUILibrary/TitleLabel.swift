@@ -3,7 +3,7 @@ import UIKit
 /// 角丸背景付きのラベル
 public final class TitleLabel: UIView {
     private let label = UI.label(12, weight: .light, color: .abc.monotone2)
-    var onTap: (() -> ())?
+    var onTap: (() -> Void)?
 
     public init(_ title: String) {
         super.init(frame: .zero)

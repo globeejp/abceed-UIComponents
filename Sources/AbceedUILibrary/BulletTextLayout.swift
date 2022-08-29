@@ -20,19 +20,23 @@ public final class BulletTextLayout: UIView {
     ) {
         super.init(frame: .zero)
 
-        [leftElement, rightElement].forEach {
-            $0.translatesAutoresizingMaskIntoConstraints = false
-            $0.layoutIfNeeded()
-            $0.sizeToFit()
-            addSubview($0)
-        }
+        [leftElement, rightElement]
+            .forEach {
+                $0.translatesAutoresizingMaskIntoConstraints = false
+                $0.layoutIfNeeded()
+                $0.sizeToFit()
+                addSubview($0)
+            }
 
         NSLayoutConstraint.activate([
             leftElement.leadingAnchor.constraint(equalTo: leadingAnchor),
             leftElement.topAnchor.constraint(equalTo: topAnchor),
             rightElement.leadingAnchor.constraint(equalTo: leftElement.trailingAnchor, constant: spacing),
             rightElement.trailingAnchor.constraint(equalTo: trailingAnchor),
-            rightElement.topAnchor.constraint(equalTo: leftElement.centerYAnchor, constant: -(rightTextFontSize * 1.2) / 2),
+            rightElement.topAnchor.constraint(
+                equalTo: leftElement.centerYAnchor,
+                constant: -(rightTextFontSize * 1.2) / 2
+            ),
             leftElement.bottomAnchor.constraint(equalTo: bottomAnchor).priority(.defaultLow),
             rightElement.bottomAnchor.constraint(equalTo: bottomAnchor),
         ])
