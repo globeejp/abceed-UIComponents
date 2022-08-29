@@ -5,7 +5,7 @@ import UIKit
 /// 引数で渡される左側要素はセルフサイジングしている前提。
 /// 左側要素のcenterYと右側テキストの1行目で制約が貼られる形。
 /// 左側要素の方が高い想定なのであまり小さいと崩れるかも。
-public final class BulletTextView: UIView {
+public final class BulletTextLayout: UIView {
 
     /// - parameter leftElement: アイコンやテキストビュー（アイコン以外だと崩れるかも）
     /// - parameter spacing: 左と右の間のマージン
@@ -42,7 +42,7 @@ public final class BulletTextView: UIView {
     public required init?(coder: NSCoder) { fatalError() }
 }
 
-private struct BulletTextViewPreviewView1: UIViewRepresentable {
+private struct BulletTextLayoutPreviewView1: UIViewRepresentable {
 
     func makeUIView(context: Context) -> PreviewView {
         let textview = UILabel()
@@ -60,7 +60,7 @@ private struct BulletTextViewPreviewView1: UIViewRepresentable {
     }
 }
 
-private struct BulletTextViewPreviewView2: UIViewRepresentable {
+private struct BulletTextLayoutPreviewView2: UIViewRepresentable {
 
     func makeUIView(context: Context) -> PreviewView {
         let textview = UILabel()
@@ -78,7 +78,7 @@ private struct BulletTextViewPreviewView2: UIViewRepresentable {
     }
 }
 
-private struct BulletTextViewPreviewView3: UIViewRepresentable {
+private struct BulletTextLayoutPreviewView3: UIViewRepresentable {
 
     func makeUIView(context: Context) -> PreviewView {
         let textview = UILabel()
@@ -96,7 +96,7 @@ private struct BulletTextViewPreviewView3: UIViewRepresentable {
     }
 }
 
-private struct BulletTextViewPreviewView4: UIViewRepresentable {
+private struct BulletTextLayoutPreviewView4: UIViewRepresentable {
 
     func makeUIView(context: Context) -> PreviewView {
         let label = UILabel()
@@ -135,30 +135,30 @@ private final class PreviewView: UIStackView {
 
         rightElement.backgroundColor = .systemYellow
 
-        let bulletTextView = BulletTextView(
+        let BulletTextLayout = BulletTextLayout(
             icon,
             spacing: 10,
             rightElement: rightElement,
             rightTextFontSize: rightTextFontSize
         )
 
-        bulletTextView.backgroundColor = .systemRed
-        bulletTextView.translatesAutoresizingMaskIntoConstraints = false
+        BulletTextLayout.backgroundColor = .systemRed
+        BulletTextLayout.translatesAutoresizingMaskIntoConstraints = false
 
-        addArrangedSubview(bulletTextView)
+        addArrangedSubview(BulletTextLayout)
         addArrangedSubview(.spacer())
     }
 
     required init(coder: NSCoder) { fatalError() }
 }
 
-struct BulletTextView_Previews: PreviewProvider {
+struct BulletTextLayout_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            BulletTextViewPreviewView3()
-            BulletTextViewPreviewView4()
-            BulletTextViewPreviewView1()
-            BulletTextViewPreviewView2()
+            BulletTextLayoutPreviewView3()
+            BulletTextLayoutPreviewView4()
+            BulletTextLayoutPreviewView1()
+            BulletTextLayoutPreviewView2()
         }
         .previewLayout(.sizeThatFits)
     }

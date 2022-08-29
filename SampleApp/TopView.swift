@@ -3,13 +3,13 @@ import UIKit
 
 final class TopView: UIView {
 
-    private let author: BulletTextView
+    private let author: BulletTextLayout
     private let authorValueLabel = UI.label(14, weight: .light, color: .abc.monotone2)
 
     var onTap: (() -> Void)?
 
     override init(frame: CGRect) {
-        author = BulletTextView(TitleLabel("著者"), spacing: 5, rightElement: authorValueLabel, rightTextFontSize: 14)
+        author = BulletTextLayout(TitleLabel("著者"), spacing: 5, rightElement: authorValueLabel, rightTextFontSize: 14)
 
         super.init(frame: frame)
 

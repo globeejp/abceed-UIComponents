@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8A1F7E6C28BC9E83003EC026 /* BulletTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1F7E6B28BC9E83003EC026 /* BulletTextView.swift */; };
+		8A1F7E6C28BC9E83003EC026 /* BulletTextLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1F7E6B28BC9E83003EC026 /* BulletTextLayout.swift */; };
 		8A1F7E6E28BCAD56003EC026 /* Namespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1F7E6D28BCAD55003EC026 /* Namespace.swift */; };
 		8A1F7E7028BCB043003EC026 /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1F7E6F28BCB043003EC026 /* TitleLabel.swift */; };
 		8A1F7E7228BCB355003EC026 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1F7E7128BCB355003EC026 /* Book.swift */; };
@@ -34,7 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8A1F7E6B28BC9E83003EC026 /* BulletTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletTextView.swift; sourceTree = "<group>"; };
+		8A1F7E6B28BC9E83003EC026 /* BulletTextLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletTextLayout.swift; sourceTree = "<group>"; };
 		8A1F7E6D28BCAD55003EC026 /* Namespace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Namespace.swift; sourceTree = "<group>"; };
 		8A1F7E6F28BCB043003EC026 /* TitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
 		8A1F7E7128BCB355003EC026 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
@@ -150,7 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_9 /* AbceedUILibrary.swift */,
-				8A1F7E6B28BC9E83003EC026 /* BulletTextView.swift */,
+				8A1F7E6B28BC9E83003EC026 /* BulletTextLayout.swift */,
 				8A1F7E6D28BCAD55003EC026 /* Namespace.swift */,
 				8A1F7E6F28BCB043003EC026 /* TitleLabel.swift */,
 				8A1F7E7128BCB355003EC026 /* Book.swift */,
@@ -280,7 +280,7 @@
 				8A1F7E7028BCB043003EC026 /* TitleLabel.swift in Sources */,
 				8A1F7E6E28BCAD56003EC026 /* Namespace.swift in Sources */,
 				8A1F7E7228BCB355003EC026 /* Book.swift in Sources */,
-				8A1F7E6C28BC9E83003EC026 /* BulletTextView.swift in Sources */,
+				8A1F7E6C28BC9E83003EC026 /* BulletTextLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
