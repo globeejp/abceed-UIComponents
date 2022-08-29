@@ -1,13 +1,10 @@
 import UIKit
 
 final class BottomView: UIView {
-    var onTap: (() -> Void)?
-
     override init(frame: CGRect) {
         super.init(frame: frame)
 
         configureLayout()
-        configureUserEvent()
     }
 
     required init?(coder: NSCoder) { fatalError() }
@@ -15,10 +12,4 @@ final class BottomView: UIView {
     private func configureLayout() {
         backgroundColor = UIColor(named: "MyYellow")
     }
-
-    private func configureUserEvent() {
-        addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tap)))
-    }
-
-    @objc private func tap() { onTap?() }
 }

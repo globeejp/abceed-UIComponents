@@ -3,7 +3,6 @@ import UIKit
 /// 角丸背景付きのラベル
 public final class TitleLabel: UIView {
     private let label = UI.label(12, weight: .light, color: .abc.monotone2)
-    var onTap: (() -> Void)?
 
     public init(_ title: String) {
         super.init(frame: .zero)
@@ -11,7 +10,6 @@ public final class TitleLabel: UIView {
         label.text = title
 
         configureLayout()
-        configureUserEvent()
     }
 
     required init?(coder: NSCoder) { fatalError() }
@@ -30,10 +28,4 @@ public final class TitleLabel: UIView {
             label.centerYAnchor.constraint(equalTo: centerYAnchor),
         ])
     }
-
-    private func configureUserEvent() {
-        addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tap)))
-    }
-
-    @objc private func tap() { onTap?() }
 }
