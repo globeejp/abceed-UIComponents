@@ -112,3 +112,14 @@ extension Abceed where Base: UIColor {
     public static var monotone7: UIColor { .init(named: "monotone7")! }
     public static var monotone8: UIColor { .init(named: "monotone8")! }
 }
+
+extension Abceed where Base: UIImage {
+    public static var iconStudyAudio: UIImage { .init(named: "iconStudyAudio")! }
+    public static var iconStudyMarksheet: UIImage { .init(named: "iconStudyMarksheet")! }
+    public static var iconStudyMyVocab: UIImage { .init(named: "iconStudyMyVocab")! }
+    public static var iconStudyQuiz: UIImage { .init(named: "iconStudyQuiz")! }
+    public static var iconStudyRecord: UIImage { .init(named: "iconStudyRecord")! }
+    public static var iconSW: UIImage { .init(named: "iconSW")! }
+    public static var iconVocab: UIImage { .init(named: "iconVocab")! }
+    public static var iconStudyTest: UIImage { .init(named: "iconStudyTest")! }
+}
