@@ -5,6 +5,9 @@ import PackageDescription
 
 let package = Package(
     name: "AbceedUILibrary",
+    platforms: [
+        .iOS(.v14),
+    ],
     products: [
         .library(
             name: "AbceedUILibrary",
