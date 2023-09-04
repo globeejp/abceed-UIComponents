@@ -80,21 +80,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8AD011C52AA6144B00858E1C /* ListView */ = {
+			isa = PBXGroup;
+			children = (
+				8AD011BF2AA60ECE00858E1C /* ListView.swift */,
+				8AD011C12AA60FE400858E1C /* ListViewModel.swift */,
+				8AD011C32AA6105900858E1C /* ListViewController.swift */,
+			);
+			path = ListView;
+			sourceTree = "<group>";
+		};
+		8AD011C62AA6145500858E1C /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				8AFF643828B8E63B006C8C10 /* TopView.swift */,
+				8AFF642828B8E591006C8C10 /* ViewController.swift */,
+				8AFF643A28B8E667006C8C10 /* BottomView.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		8AFF642328B8E591006C8C10 /* SampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				8AD011C62AA6145500858E1C /* Detail */,
+				8AD011C52AA6144B00858E1C /* ListView */,
 				8AFF642428B8E591006C8C10 /* AppDelegate.swift */,
-				8AFF643828B8E63B006C8C10 /* TopView.swift */,
 				8AFF642628B8E591006C8C10 /* SceneDelegate.swift */,
-				8AFF642828B8E591006C8C10 /* ViewController.swift */,
-				8AD011BF2AA60ECE00858E1C /* ListView.swift */,
-				8AD011C12AA60FE400858E1C /* ListViewModel.swift */,
 				8AD011BB2AA60E9200858E1C /* Book.swift */,
-				8AFF643A28B8E667006C8C10 /* BottomView.swift */,
 				8AFF642D28B8E592006C8C10 /* Assets.xcassets */,
 				8AFF642F28B8E592006C8C10 /* LaunchScreen.storyboard */,
 				8AFF643228B8E592006C8C10 /* Info.plist */,
-				8AD011C32AA6105900858E1C /* ListViewController.swift */,
 			);
 			path = SampleApp;
 			sourceTree = "<group>";
