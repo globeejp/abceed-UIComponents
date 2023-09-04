@@ -24,10 +24,11 @@ final class ListViewController: UIViewController {
         view.constrainSubview(hostingView)
         hostingController.didMove(toParent: self)
 
-        viewModel.transition.receive(on: DispatchQueue.main).sink(receiveValue: { [weak self] transition in
-            let vc = ViewController()
-            self?.navigationController?.pushViewController(vc, animated: true)
-        })
-        .store(in: &cancellables)
+        viewModel.transition.receive(on: DispatchQueue.main)
+            .sink(receiveValue: { [weak self] transition in
+                let vc = ViewController()
+                self?.navigationController?.pushViewController(vc, animated: true)
+            })
+            .store(in: &cancellables)
     }
 }
